@@ -3,7 +3,7 @@ const path = require("path");
 const { v4: uuid4 } = require("uuid");
 const methodOverride = require("method-override");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
