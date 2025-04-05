@@ -11,8 +11,8 @@
       <h1>Welcome to My Blog</h1>
       <nav>
         <a href="/">Home</a>
-        <a href="http://localhost:8080/posts">All Posts</a>
-        <a href="http://localhost:8080/posts/new">Create Post</a>
+        <a href="/posts">All Posts</a>
+        <a href="/posts/new">Create Post</a>
       </nav>
     </header>
     <main>
@@ -22,12 +22,9 @@
         <%= post.content.length > 90 ? post.content.slice(0, 90) + '...' :
         post.content %>
         <p>Author: <%= post.author %></p>
-        <a href="http://localhost:8080/posts/<%= post.id %>">Read More</a>
-        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit Post</a>
-        <form
-          method="post"
-          action="http://localhost:8080/posts/<%= post.id %>?_method=DELETE"
-        >
+        <a href="/posts/<%= post.id %>">Read More</a>
+        <a href="/posts/<%= post.id %>/edit">Edit Post</a>
+        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
           <button>Delete post</button>
         </form>
       </section>
