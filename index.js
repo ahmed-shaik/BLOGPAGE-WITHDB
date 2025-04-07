@@ -15,7 +15,7 @@ app.use(methodOverride("_method"));
 const Post = require("./Post");
 
 app.listen(port, () => {
-  console.log("server started at port 8080");
+  console.log(`Server started at port ${port}`);
 });
 
 app.get("/", (req, res) => {
