@@ -19,15 +19,9 @@
       <section>
         <h1><%= post.title %></h1>
         <br /><br />
-        <p><%= post.content %></p>
+        <p><%- post.content %></p>
         <br /><br />
         <p>Author: <%= post.author %></p>
-        <!-- <form action="/posts/<%= post.id %>/edit?_method=PATCH" method="GET">
-          <button>Edit Post</button>
-        </form> -->
-        <!-- <form action="/posts/< post.id %>?_method=DELETE" method="POST">
-          <button>Delete Post</button>
-        </form> -->
       </section>
     </main>
   </body>

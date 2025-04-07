@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to <%=post.author%>'s post</h1>
+      <h1>Welcome to <%= post.author %>'s Post</h1>
       <nav>
         <a href="/">Home</a>
         <a href="/posts">All Posts</a>
@@ -17,24 +17,24 @@
     </header>
     <main>
       <section>
-        <h3>Author: <%= post.author%></h3>
-        <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <h3>Author: <%= post.author %></h3>
+        <form method="POST" action="/posts/<%= post.id %>?_method=PATCH">
           <label for="content">Edit Your Content:</label>
           <textarea
             name="content"
             id="content"
             cols="80"
-            rows="10"
+            rows="15"
             style="font-size: 1.2rem"
           >
-            <%= post.content%>
-            </textarea
+<%- post.content %></textarea
           >
+
           <center>
             <button
               style="padding: 1rem 3rem; font-size: 1.5rem; margin-top: 1rem"
             >
-              Edit
+              Save Changes
             </button>
           </center>
         </form>
